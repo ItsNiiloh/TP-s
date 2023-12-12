@@ -1,12 +1,15 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+const rectangleButton = document.getElementById("rectangleButton");
 
 // Valeurs par défaut
 let isPainting = false;
+let isRectangleMode = false;
 let lastX = 0;
 let lastY = 0;
 let color = "#000000";
 let lineWidth = 1;
+
 
 // Event listeners pour commencer a dessiner
 canvas.addEventListener("mousedown", startPainting);
@@ -14,10 +17,10 @@ canvas.addEventListener("mousemove", draw);
 // Event listener pour arreter de dessiner
 canvas.addEventListener("mouseup", stopPainting);
 
+
 // Function pour dessiner l'ors d'un mouvement de la souris
 function draw(e) {
     if (!isPainting) return;
-
     // Definir les options de l'user
     ctx.strokeStyle = color;
     ctx.lineWidth = lineWidth;
@@ -56,3 +59,30 @@ function changeLineWidth(value) {
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+function changeMode() {
+    isRectangleMode = !isRectangleMode;
+    let modeButton = document.getElementById('modeButton');
+
+    if (isRectangleMode) {
+        modeButton.textContent = 'Paint Mode';
+    } else {
+        modeButton.textContent = 'Rectangle Mode';
+    }
+}
+
+function drawRect(event) {
+    if (isRectangleMode) {
+        let x = event.offsetX;
+        let y = event.offsetY;
+
+        ctx.fillStyle = color;
+        ctx.fillRect(x - 25, y - 25, 100, 50); 
+    }
+}
+
+canvas.addEventListener('mousedown', function (event) {
+    if (isRectangleMode) {
+        drawRect(event);
+    }
+});
