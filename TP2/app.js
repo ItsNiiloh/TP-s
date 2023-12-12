@@ -57,6 +57,7 @@ function changeLineWidth(value) {
 
 // Effacer le tableau
 function clearCanvas() {
+    e.preventDefault();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
