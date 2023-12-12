@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Liste de tâches</title>
+</head>
+
+<body>
+    <h1>Liste de tâches</h1>
+
+    <ul id="taskList"></ul>
+
+    <form id="taskForm">
+        <fieldset>
+            <legend>Ajouter une nouvelle tâche</legend>
+            <label for="taskTitle">Titre</label>
+            <input type="text" id="taskTitle" name="title" />
+            <label for="taskPriority">Priorité</label>
+            <select name="priority" id="taskPriority">
+                <option value="1">Haute</option>
+                <option value="2">Normal</option>
+                <option value="3">Faible</option>
+            </select>
+            <button type="submit">Enregistrer la tâche</button>
+        </fieldset>
+    </form>
+
+    <button id="deleteButton">Supprimer toutes les tâches terminées</button>
+    <script src="app.js"></script>
+</body>
+
+</html>

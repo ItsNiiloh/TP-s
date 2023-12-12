@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>TP2</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="canva">
+            <canvas id="canvas" width="800" height="600"></canvas>
+        </div>
+        <div class="options">
+            <div class="color-palette">
+                <div class="color-box" style="background-color: #ff0000" onclick="changeColor('#ff0000')"></div>
+                <div class="color-box" style="background-color: #00ff00" onclick="changeColor('#00ff00')"></div>
+                <div class="color-box" style="background-color: #0000ff" onclick="changeColor('#0000ff')"></div>
+                <div class="color-box" style="background-color: #ffff00" onclick="changeColor('#ffff00')"></div>
+                <div class="color-box" style="background-color: #ff00c8" onclick="changeColor('#ff00c8')"></div>
+                <div class="color-box" style="background-color: #000000" onclick="changeColor('#000000')"></div>
+            </div>
+            <input type="range" min="1" max="100" value="1" id="lineWidthRange" onchange="changeLineWidth(this.value)" />
+            <button onclick="clearCanvas()" class="button">Effacer</button>
+        </div>
+    </div>
+</body>
+
+</html>
