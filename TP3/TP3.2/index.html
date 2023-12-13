@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>TP3.2</title>
     <script src="main.js" defer type="module"></script>
     <style>
-        form {
-            display: flex;
-        }
-        div {
-            margin-right: 2px;
-        }
+      form {
+        display: flex;
+      }
+      div {
+        margin-right: 2px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <form>
-        <div id="regions">
-            <select id="regionsSelect">
-                <option value="" disabled selected hidden>Régions</option>
-            </select>
-        </div>
-        <div id="departements">
-            <select id="departementsSelect">
-                <option value="" disabled selected hidden>Départements</option> 
-            </select>
-        </div>
-        <button id="fetchVilles" type="submit">Afficher les Villes</button>
+      <div id="regions">
+        <select id="regionsSelect">
+          <option value="" disabled selected hidden>Régions</option>
+        </select>
+      </div>
+      <div id="departements">
+        <select id="departementsSelect">
+          <option value="" disabled selected hidden>Départements</option>
+        </select>
+      </div>
+      <button id="fetchVilles" type="submit">Afficher les Villes</button>
     </form>
     <table id="villes-table">
-        <tbody>
-            <tr></tr>
-        </tbody>
+      <tbody></tbody>
     </table>
-</body>
+  </body>
 </html>
