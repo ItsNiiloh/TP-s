@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies API</title>
+    <script src="main.js" type="module"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <span class="fs-4 fw-bold">TheMovieDB API</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="https://developer.themoviedb.org/reference/intro/getting-started" class="nav-link">Doc API</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.themoviedb.org/" class="nav-link">Lien vers le site</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+    <div class="text-secondary px-4 py-5 text-center" id="search-form">
+        <div class="py-5">
+            <h1 class="display-5 fw-bold text-black">API TheMovieAPI</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="fs-5 mb-4 py-3 border-bottom">
+                    Simple API pour chercher des films.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <input type="text" id="search-input" autofocus />
+                    <button type="button" type="submit" class="btn btn-info px-4 me-sm-3 fw-bold" id="search-button">
+                        Rechercher
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="moviesList"></div>
+        </div>
+    </div>
+<!--     <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

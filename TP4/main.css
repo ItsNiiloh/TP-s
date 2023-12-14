@@ -1,0 +1,26 @@
+.card {
+    --bs-card-height: 700px;
+}
+
+.row-cols-md-3>* {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.card-text {
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+.card-body {
+    overflow-y: scroll;
+}
+
+.card-body::-webkit-scrollbar {
+    display: none;
+}
+
+.pagination {
+    padding-top: 3vh;
+    justify-content: center;
+}
