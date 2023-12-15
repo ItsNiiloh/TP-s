@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Cinema</title>
+    <link href="./css/custom.css" rel="stylesheet">
+    <script type="module" src="main.js"></script>
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <h1>Projet: TP5 Cinéma</h1>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 form-extra" role="search">
+                    <input id="searchInput" class="form-control text-bg-dark" placeholder="Rechercher localisation">
+                    <button id="searchBtn" type="button" class="btn btn-outline-light me-2 me">Rechercher</button>
+                </form>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning" id="geolocateBtn">Se géolocaliser</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="c-divider"></div>
+    <br>
+    <div class="d-md-flex flex-md-equal w-100 ">
+        <div class="container divpadder bg-body-tertiary overflow-scroll"
+            style="width: 49%; border-radius: 21px 21px 0 0;">
+            <div class="my-3 p-3">
+                <h2 class="cinemaList">Découvrez les 10 plus grands cinémas de France.</h2>
+                <br>
+            </div>
+            <div class="bg-body shadow-sm mx-auto">
+                <table class="table table-striped" id="cinemaTable">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Adresse</th>
+                            <th scope="col">Ville</th>
+                            <th scope="col">Fauteuils</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cinemaTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container divpadder bg-body-tertiary overflow-scroll"
+            style="width: 49%; border-radius: 21px 21px 0 0;">
+            <div class="my-3 p-3">
+                <h2 class="cinemaList">Trouvez les salles de cinéma les plus proches de chez vous.</h2>
+                <br>
+            </div>
+            <table class="table table-striped">
+                <thead class="thead">
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Adresse</th>
+                        <th scope="col">Ville</th>
+                        <th scope="col">Fauteuils</th>
+                        <th scope="col">Distance</th>
+                    </tr>
+                </thead>
+                <tbody id="nearCinemasList">
+                </tbody>
+            </table>
+            <p id="noResultsMessage" style="text-align: center;">(Explorez les cinémas à proximité ! Si vous ne
+                souhaitez pas activer la géolocalisation, effectuez une recherche pour voir les résultats.)</p>
+        </div>
+    </div>
+
+    <div class="b-divider"></div>
+</body>
+
+</html>
